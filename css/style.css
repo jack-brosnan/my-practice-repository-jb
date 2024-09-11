@@ -31,16 +31,97 @@ nav a:hover {
     background-color: #fff
 }
 
+.parent-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.child-container {
+    border-radius: 25px;
+    flex-basis: 20%;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 10px;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 25px;
+    padding: 10px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .parent-container {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    .child-container {
+        border-radius: 25px;
+        flex-basis: 50%;
+        border: 1px solid black;
+        margin-top: 10px;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .child-container {
+        float: left;
+        width: 50%;
+        margin-left: 0;
+        border: 1px solid black;
+
+    }
+  }
+
+.child-container a {
+    text-align: center;
+    color: black;
+    text-decoration:none;
+}
+
+.child-container h2 {
+    
+    /* width: 100%; */
+    border-radius:25px;
+    transition-property: width;
+}
+
+
+.child-container:hover {
+    background-color: lightblue;
+    border-radius: 25px;
+ 
+    h2 {
+    
+        background-color: white;
+        width: 100%;
+        color: blue;
+        
+    }
+}
+
 .card {
-    float: left;
+    float:left;
     width: 20%;
     margin-left: 10%;
     /* border: 1px solid black; */
+
 }
 
 .card a {
-    text-align: center;
-
+    text-decoration: none;
 }
 
 img {
@@ -51,3 +132,7 @@ img {
 h2 {
     text-align: center;
 }
+
+
+ 
+    
