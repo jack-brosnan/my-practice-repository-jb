@@ -1,7 +1,11 @@
 body {
-    margin:0 ;
+    margin:0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
+}
+
+#page-margin {
+    margin: 0 10%;
 }
 
 nav ul {
@@ -14,10 +18,10 @@ nav ul {
 
 nav li {
     font-size: 1.2em;
-    line-height: 40px;
-    height: 40px;
+    line-height: 20px;
+    height: 20px;
     display: inline-block;
-    margin: 2.5%;    
+    margin: 1.5%;    
 }
 
 nav a {
@@ -36,22 +40,39 @@ nav a:hover {
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    gap: 15px;
     
 }
 
 .child-container {
     border-radius: 25px;
     flex-basis: 20%;
-    border: 1px solid black;
     margin-top: 10px;
     padding: 10px;
-    transition-property: background-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition-property: background-color, transform;
     transition-duration: 0.5s;
     border-radius: 25px;
     padding: 10px;
+    .image-text-animation {
+        width:auto;
+        border-radius: 25px;
+        transition-property: width;
+        transition-duration: 0.5s;
+        text-align:center;
+    }
     
+}
+
+.child-container:hover {
+    background-color: lightblue;
+    border-radius: 25px;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+   
 }
 
 @media only screen and (max-width: 600px) {
@@ -62,27 +83,23 @@ nav a:hover {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+        margin: 0 auto;
+        
+        
         
     }
 
     .child-container {
         border-radius: 25px;
-        flex-basis: 50%;
-        border: 1px solid black;
+        flex-basis: 70%;
         margin-top: 10px;
         transition-property: background-color;
         transition-duration: 0.5s;
         border-radius: 25px;
         padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
-
-    .child-container {
-        float: left;
-        width: 50%;
-        margin-left: 0;
-        border: 1px solid black;
-
-    }
+    
   }
 
 .child-container a {
@@ -93,30 +110,19 @@ nav a:hover {
 
 .child-container h2 {
     
-    /* width: 100%; */
     border-radius:25px;
     transition-property: width;
-}
-
-
-.child-container:hover {
-    background-color: lightblue;
-    border-radius: 25px;
- 
-    h2 {
-    
-        background-color: white;
-        width: 100%;
-        color: blue;
-        
-    }
 }
 
 .card {
     float:left;
     width: 20%;
     margin-left: 10%;
-    /* border: 1px solid black; */
+    
+}
+
+.card:hover {
+    background-color: lightblue;
 
 }
 
@@ -131,8 +137,19 @@ img {
 
 h2 {
     text-align: center;
-}
+    }
 
+    .hover-header {
+        position: relative;
+        color: black;
+        background-color: transparent;
+        z-index: 1;
+        cursor: pointer;
+        overflow: hidden;
+        transition: color 2s ease;
+        padding: 0;
+    }
+    
 
  
     
