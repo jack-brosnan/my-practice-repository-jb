@@ -53,7 +53,7 @@ nav a:hover {
     flex-basis: 20%;
     margin-top: 10px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     transition-property: background-color, transform, opacity;
     transition-duration: 0.5s;
     border-radius: 25px;
@@ -99,33 +99,6 @@ nav a:hover {
     transform: scale(1.1);
     
         
-}
-
-.child-container:hover + .child-container {
-    opacity: 0.5;
-}
-
-.child-container:hover ~ #summary-points {
-    opacity: 1;
-}
-
-
-
-
-#css3-text {
-    
-}
-
-#js-text {
-    
-}
-
-#git-text {
-    
-}
-
-#github-text {
-    
 }
 
 @media only screen and (max-width: 600px) {
@@ -200,7 +173,7 @@ h2 {
     text-align: center;
     }
 
-    .hover-header {
+.hover-header {
         position: relative;
         color: black;
         background-color: transparent;
@@ -210,6 +183,10 @@ h2 {
         transition: color 2s ease;
         padding: 0;
     }
-    
 
+.spotlight {
+    opacity: 1 !important; /* Opacity change on hover */
+    transform: scale(1.05);
+    
+}
  
