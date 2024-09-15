@@ -2,6 +2,7 @@ body {
     margin:0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
+    background-color: #F2F3F4;
     overflow-y: scroll;
 
 }
@@ -53,11 +54,13 @@ nav a:hover {
     flex-basis: 20%;
     margin-top: 10px;
     padding: 10px;
+    background-color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     transition-property: background-color, transform, opacity;
     transition-duration: 0.5s;
     border-radius: 25px;
     padding: 10px;
+    cursor: pointer;
     
 }
 
@@ -70,33 +73,91 @@ nav a:hover {
    
 }
 
+.summary {
+    color: #fff;
+    border-radius: 25px;
+    flex-basis: 20%;
+    margin-top: 10px;
+    transition-property: background-color, transform;
+    transform: scale(1.0);
+    transition-duration: 0.5s;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 #summary-points {
-    flex-grow: 1.5;
+    flex-grow: 2;
     margin: 0;
     cursor: pointer;
     background-color: #4a4a4f;    
     padding: 0;
 }
 
-.child-container li {
+.summary-list li {
     list-style: none;
-    margin: 0 40px 10px 0;
+    margin: 10px 40px 10px 0;
     padding: 0 10px 0;
     text-align: justify;
     transition-property: color, background-color, transform;
     transition-duration: 0.5s;
     border-radius: 15px;
-    color: #fff;
     font-size: 1em;
-    
-           
+                   
 }
 
-.child-container li:hover {
+.summary-list {
+    list-style: none;
+    margin: 0 0 10px 20px;
+    padding: 0 10px 0;
+    text-align: justify;
+    transition-property: color, background-color, transform;
+    transition-duration: 0.5s;
+    border-radius: 15px;
+    font-size: 1em;
+    color: white;
+               
+}
+
+.spotlight-list {
+    margin: 0 0 10px 20px;
+    padding: 10px 10px 0;
+    text-align: justify;
+    transition-property: color, background-color, transform;
+    transition-duration: 0.5s;
+    border-radius: 15px;
+    color:white;
+               
+}
+
+.spotlight-list li {
+    list-style: none;
+    margin: 10px 40px 10px 0;
+    padding: 0 10px 0;
+    text-align: justify;
+    transition-property: color, background-color, transform;
+    transition-duration: 0.5s;
+    border-radius: 15px;
+    font-size: 1em;
+                   
+}
+
+.spotlight-list li:hover {
     color: #4a4a4f;
     background-color: #fff;
     border-radius: 15px;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    
+        
+}
+
+
+
+.summary-list li:hover {
+    color: #4a4a4f;
+    background-color: #fff;
+    border-radius: 15px;
+    transform: scale(1.05);
     
         
 }
@@ -126,6 +187,8 @@ nav a:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
+
+
     .child-container:hover {
         transform: scale(1.0);
     }
@@ -146,6 +209,7 @@ nav a:hover {
     
     border-radius:25px;
     transition-property: width;
+    
 }
 
 .card {
@@ -187,6 +251,11 @@ h2 {
 .spotlight {
     opacity: 1 !important; /* Opacity change on hover */
     transform: scale(1.05);
+    background-color: lightblue;
     
 }
  
+.changed-content {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
