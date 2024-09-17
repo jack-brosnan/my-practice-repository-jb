@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function () {
+
 //SPOTLIGHT CARD WHEN HOVERING CORRESPONDING LIST TEXT IN SUMMARY CARD
 
 
@@ -40,7 +42,7 @@ listItems.forEach(item => {
 
 
 // CHANGE OPACITY OF ALL SIBLING CONTAINERS THAT ARE NOT IN FOCUS
-
+function notInFocus() {
 // Get all sibling containers with the class "child-containers"
 const siblings = document.querySelectorAll('.child-container');
 
@@ -92,10 +94,10 @@ siblings.forEach(sibling => {
     }
   });
 });
-
+};
 
 //CHANGE CONTENT OF SUMMARY CONTAINER
-
+function summaryContentBox() {
   // Get all the child containers and the summary container
   const containers = document.querySelectorAll('.child-container');
   const targetContainer = document.getElementById('summary-points');
@@ -178,8 +180,9 @@ siblings.forEach(sibling => {
  let lastClickedContainerId = null;
  let lastClickedContainerElement = null;
 
- // Add a click event listener to each card container (.child-container)
- containers.forEach(container => {
+//  function updateContentForDesktop() {
+  // Add a click event listener to each card container (.child-container)
+  containers.forEach(container => {
      container.addEventListener('click', function() {
          // Get the ID of the clicked container (e.g., 'html5content', 'css3content', etc.)
          const containerId = container.id;
@@ -220,5 +223,10 @@ siblings.forEach(sibling => {
      });
  });
 
- handleListHover();
+};
 
+  
+ handleListHover();
+ notInFocus();
+ summaryContentBox();
+});
